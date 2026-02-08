@@ -98,5 +98,5 @@ button {
     background-color: #11111b;
     color: #cdd6f4;
     font-weight: bolder;
-    display: none;
+    /* display: none; */
 }
