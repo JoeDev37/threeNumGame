@@ -12,11 +12,27 @@ const restartBtn = document.getElementById('restart');
 
 document.addEventListener('DOMContentLoaded', ()=> {
 
-    const numElements = document.querySelectorAll('.num');
+    alert('press the "S" key');
 
-    setInterval(() => {
-        numElements.forEach(num => {
-        num.textContent = Math.floor(Math.random() * 10);
-    });
-    }, 700);
+    document.addEventListener('keydown', (event) => {
+        // console.log('you pressed: ', event.key);
+
+        if (event.key === 's' || event.key === 'S') {
+            const numElements = document.querySelectorAll('.num');
+
+            setInterval(() => {
+                numElements.forEach(num => {
+                    num.textContent = Math.floor(Math.random() * 10)
+                })
+            }, 700);
+        }
+    })
+
+    // const numElements = document.querySelectorAll('.num');
+
+    // setInterval(() => {
+    //     numElements.forEach(num => {
+    //     num.textContent = Math.floor(Math.random() * 10);
+    // });
+    // }, 700);
 })
