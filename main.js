@@ -13,7 +13,6 @@ let spin = {
   numThree: null
 };
 
-// Map parent div IDs to number IDs
 const idMap = {
   one: 'numOne',
   two: 'numTwo',
@@ -21,6 +20,9 @@ const idMap = {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+
+  alert(`click "S" to start the game`);
+
   document.addEventListener('keydown', (event) => {
     if (event.key.toLowerCase() === 's') {
       Object.keys(spin).forEach(id => {
@@ -39,8 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 document.querySelectorAll('.child').forEach(child => {
   child.addEventListener('click', (e) => {
-    const clickedDivId = e.currentTarget.id;   // one, two, three
-    const numId = idMap[clickedDivId];         // numOne, numTwo, numThree
+    const clickedDivId = e.currentTarget.id;   
+    const numId = idMap[clickedDivId];        
 
     if (spin[numId]) {
       clearInterval(spin[numId]);
@@ -51,3 +53,27 @@ document.querySelectorAll('.child').forEach(child => {
     }
   });
 });
+
+document.addEventListener('click', () => {
+  if (spin[numOne] === spin[numTwo] && spin[numTwo] === spin[numThree]) {
+
+    const div = document.createElement('div');
+    // const newText = document.createTextNode('it is working');
+    // div.textContent = 'it is working!';
+    // document.body.appendChild(div)
+    console.log(div.textContent = 'it is working!');
+
+    // const b = document.body.insertBefore(div);
+
+  } else  {
+    const div = document.createElement('div');
+    // const newText = document.createTextNode('it is not working');
+    // div.textContent = 'it is not working!';
+    // document.body.appendChild(newText)
+
+    console.log(div.textContent = 'it is not working!');
+
+    // document.body.insertBefore(div);
+  }
+
+})
