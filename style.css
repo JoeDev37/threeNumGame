@@ -98,5 +98,11 @@ button {
     background-color: #11111b;
     color: #cdd6f4;
     font-weight: bolder;
+    cursor: pointer;
     /* display: none; */
+}
+
+#nextRound {
+    background-color: red;
+    display: none;
 }
