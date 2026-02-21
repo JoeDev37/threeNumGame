@@ -92,7 +92,7 @@ h3 {
 
 button {
     padding: 10px;
-    background-color: red;
+    /* background-color: red; */
     border: none;
     border-radius: 5px;
     background-color: #11111b;
@@ -103,6 +103,7 @@ button {
 }
 
 #nextRound {
-    background-color: red;
+    background-color: #a6e3a1;
+    color: #11111b;
     display: none;
 }
